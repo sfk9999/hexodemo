@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css_triangle</title>
+    <link rel="stylesheet" href="css/base/base.css">
+    <!--highligh-->
+    <link rel="stylesheet" href="css/base/highlight/rainbow.css">
+    <script src="js/highlight/highlight.pack.js"></script>
+    <link rel="stylesheet" href="css/css_triangle.css">
+</head>
+<body>
+<div class="box">
+    <div class="triangle triangle-up"></div>
+    <div class="triangle triangle-down"></div>
+    <div class="triangle triangle-left"></div>
+    <div class="triangle triangle-right"></div>
+    <div class="triangle triangle-top-left"></div>
+    <div class="triangle triangle-top-right"></div>
+    <div class="triangle triangle-bottom-left"></div>
+    <div class="triangle triangle-bottom-right"></div>
+    <span>原理：</span><div class="triangle principle"></div>
+    <div class="triangle parallelogram"></div>
+</div>
+<pre class="m-code">
+<code class="remark">
+用CSS实现8种三角形和平行四边形
+</code>
+<code class="html">
+&lt;div class="triangle triangle-up">&lt;/div>
+&lt;div class="triangle triangle-down">&lt;/div>
+&lt;div class="triangle triangle-left">&lt;/div>
+&lt;div class="triangle triangle-right">&lt;/div>
+&lt;div class="triangle triangle-top-left">&lt;/div>
+&lt;div class="triangle triangle-top-right">&lt;/div>
+&lt;div class="triangle triangle-bottom-left">&lt;/div>
+&lt;div class="triangle triangle-bottom-right">&lt;/div>
+&lt;span>原理：&lt;/span>&lt;div class="triangle principle">&lt;/div>
+&lt;div class="triangle parallelogram">&lt;/div>
+</code>
+<code class="css">
+.triangle{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+}
+.triangle-up{
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+}
+.triangle-down{
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
+}
+.triangle-left{
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-right: 100px solid red;
+}
+.triangle-right{
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 100px solid red;
+}
+.triangle-top-left{
+    border-top: 100px solid red;
+    border-right: 100px solid transparent;
+}
+.triangle-top-right{
+    border-top: 100px solid red;
+    border-left: 100px solid transparent;
+}
+.triangle-bottom-left{
+    border-bottom: 100px solid red;
+    border-right: 100px solid transparent;
+}
+.triangle-bottom-right{
+    border-bottom: 100px solid red;
+    border-left: 100px solid transparent;
+}
+.parallelogram{
+    width: 120px;
+    height: 75px;
+    transform:translate(50px) skew(45deg);
+    background: red;
+}
+.principle{
+    border-width: 50px;
+    border-style: solid;
+    border-color: red green blue brown;
+}
+</code>
+</pre>
+<script>
+//highlight
+hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+</html>

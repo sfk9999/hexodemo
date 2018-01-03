@@ -1,0 +1,52 @@
+.triangle{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+}
+.triangle-up{
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+}
+.triangle-down{
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
+}
+.triangle-left{
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-right: 100px solid red;
+}
+.triangle-right{
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 100px solid red;
+}
+.triangle-top-left{
+    border-top: 100px solid red;
+    border-right: 100px solid transparent;
+}
+.triangle-top-right{
+    border-top: 100px solid red;
+    border-left: 100px solid transparent;
+}
+.triangle-bottom-left{
+    border-bottom: 100px solid red;
+    border-right: 100px solid transparent;
+}
+.triangle-bottom-right{
+    border-bottom: 100px solid red;
+    border-left: 100px solid transparent;
+}
+.parallelogram{
+    width: 120px;
+    height: 75px;
+    transform:translate(50px) skew(45deg);
+    background: red;
+}
+.principle{
+    border-width: 50px;
+    border-style: solid;
+    border-color: red green blue brown;
+}

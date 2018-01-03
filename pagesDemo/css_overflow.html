@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float+overflow左列固定，右列自适应</title>
+    <link rel="stylesheet" href="css/css_overflow.css">
+    <link rel="stylesheet" href="css/base/base.css">
+    <!--highligh-->
+    <link rel="stylesheet" href="css/base/highlight/rainbow.css">
+    <script src="js/highlight/highlight.pack.js"></script>
+</head>
+<body>
+<div class="left">
+    <p>Left</p>
+</div>
+<div class="right">
+    <p>right</p>
+    <p>right</p>
+</div>
+<!--code-->
+<pre class="m-code">
+<code>
+float+overflow左列固定，右列自适应
+
+兼容性最好
+可定宽与不定宽
+设置了overflow:hidden；即利用BFC的规则（里面内容和外界隔离，外界内容不影响内容）
+BFC：
+</code>
+<code class="html">
+&lt;div class="left">
+     &lt;p>Left&lt;/p>
+&lt;/div>
+&lt;div class="right">
+    &lt;p>right&lt;/p>
+    &lt;p>right&lt;/p>
+&lt;/div>
+</code>
+<code class="css">
+.left{
+padding:30px;
+float:left;
+background: #2f35ff;
+}
+.right{
+overflow: hidden;
+background: #fef20d;
+}
+
+</code>
+</pre>
+<script>
+    //highlight
+    hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

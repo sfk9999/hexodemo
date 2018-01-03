@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_formLinkage</title>
+    <link rel="stylesheet" href="css/js_formLinkage.css">
+</head>
+<body>
+<input type="radio" name="a-school" id="in-school" checked="checked" class="box">
+<label for="in-school">在校生</label>
+
+<input type="radio" name="a-school" id="out-school" class="box">
+<label for="out-school">非在校生</label>
+
+<div id="Div-in_school">
+
+
+    <select name="select-in_school" id="select-in_school">
+        <option value="北京" selected="selected" id="select-in_school-option_BJ">北京</option>
+        <option value="武汉" id="select-in_school-option_WH">武汉</option>
+    </select>
+
+
+    <span id="Div-school">
+        <select name="select-in_school-BJ" id="select-in_school-BJ">
+            <option value="北京大学" selected="selected">北京大学</option>
+            <option value="清华大学">清华大学</option>
+        </select>
+
+        <select name="select-in_school-WH" id="select-in_school-WH" class="hide">
+            <option value="武汉大学" selected="selected">武汉大学</option>
+            <option value="华科">华科</option>
+        </select>
+    </span>
+</div>
+
+
+<div id="Div-out_school" class="hide">
+    <label for="Div-out_school-lael">就业单位</label><input type="text" id="Div-out_school-lael">
+</div>
+
+<script>
+    function checkOn() {
+        var inOrOut = document.getElementsByClassName("box");
+        var DisplayInSchool = document.getElementById("Div-in_school");
+        var DisplayOutSchool = document.getElementById("Div-out_school");
+
+        var len =inOrOut.length;
+        for(var i=0;i<len;i++)
+        {
+            inOrOut[i].index=i;
+
+            inOrOut[i].onclick=function () {
+                if(inOrOut[0].checked == true)
+                {
+                    DisplayInSchool.className="show";
+                    DisplayOutSchool.className="hide";
+                }
+                else
+                {
+                    DisplayInSchool.className="hide";
+                    DisplayOutSchool.className="show";
+                }
+            }
+        }
+    }
+
+    function inSchoolFuc() {
+        var citySchool = document.getElementById("select-in_school");
+        var cityOption = citySchool.getElementsByTagName("option");
+        var BJSchool = document.getElementById("select-in_school-BJ");
+        var WHSchool = document.getElementById("select-in_school-WH");
+
+        var school = document.getElementById("Div-school");
+        var schoolSelect = school.getElementsByTagName("select");
+
+        for(i=0;i<schoolSelect.length;i++)
+        {
+            schoolSelect[i].className="hide";
+        }
+
+        for(var i=0;i<schoolSelect.length;i++)
+        {
+            if(cityOption[i].selected)
+            {
+                schoolSelect[i].className="schoolShow";
+            }
+        }
+    }
+    window.onload =function () {
+        var inSchool = document.getElementById("in-school");
+        var outSchool = document.getElementById("out-school");
+        checkOn();
+        var citySchool = document.getElementById("select-in_school");
+        citySchool.onchange=inSchoolFuc;
+    }
+</script>
+</body>
+</html>

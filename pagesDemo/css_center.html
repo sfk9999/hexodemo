@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>absolute+transform水平垂直居中</title>
+    <link rel="stylesheet" href="css/css_center.css">
+    <link rel="stylesheet" href="css/base/base.css">
+    <!--highligh-->
+    <link rel="stylesheet" href="css/base/highlight/rainbow.css">
+    <script src="js/highlight/highlight.pack.js"></script>
+</head>
+<body>
+    <div class="parent">
+        <div class="children">Demo</div>
+    </div>
+
+<pre class="m-code">
+<code class="remark">
+absolute+transform水平垂直居中
+
+适用于移动端
+不影响其他元素
+</code>
+<code class="html">
+&lt;div class="parent">
+    &lt;div class="children">Demo&lt;/div>
+&lt;/div>
+</code>
+<code class="css">
+.parent {
+    position:relative;
+    width:100%;
+    height:300px;
+    background:#eee;
+}
+.children {
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:50px;
+    height:50px;
+    background:#e60415;
+    transform:translate(-50%,-50%);
+}
+</code>
+</pre>
+<script>
+    //highlight
+    hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

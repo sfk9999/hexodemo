@@ -1,0 +1,9 @@
+.left{
+    background: #2f35ff;
+    padding:30px;
+    float: left;
+}
+.right{
+    background: #fef20d;
+    overflow: hidden;
+}

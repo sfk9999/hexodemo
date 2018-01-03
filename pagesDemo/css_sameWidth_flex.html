@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>等宽（等分布局）flex方法</title>
+    <link rel="stylesheet" href="css/css_sameWidth_flex.css">
+    <link rel="stylesheet" href="css/base/base.css">
+    <!--highligh-->
+    <link rel="stylesheet" href="css/base/highlight/rainbow.css">
+    <script src="js/highlight/highlight.pack.js"></script>
+</head>
+<body>
+<div class="parent">
+    <div class="column"><p>1</p></div>
+    <div class="column"><p>2</p></div>
+    <div class="column"><p>3</p></div>
+    <div class="column"><p>4</p></div>
+</div>
+
+<pre class="m-code">
+<code>
+   等宽（等分布局）的flex方法
+
+   这里的.column+.column选择的是第一列之外的后面几列
+</code>
+<code class="html">
+&lt;div class="parent">
+    &lt;div class="column">&lt;p>1&lt;/p>&lt;/div>
+    &lt;div class="column">&lt;p>2&lt;/p>&lt;/div>
+    &lt;div class="column">&lt;p>3&lt;/p>&lt;/div>
+    &lt;div class="column">&lt;p>4&lt;/p>&lt;/div>
+&lt;/div>
+</code>
+<code class="css">
+.parent{
+    display: flex;
+}
+.column{
+    flex: 1;
+}
+.column+.column{
+    margin-left: 20px;
+}
+p{
+    background:#fe8019;
+}
+</code>
+</pre>
+<script>
+    //highlight
+    hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

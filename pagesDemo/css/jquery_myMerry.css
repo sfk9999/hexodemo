@@ -1,0 +1,22 @@
+.u-merry{
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    width: 200px;
+    overflow: hidden;
+    background-color: #31b0d5;
+}
+.u-merry .container{
+    width: 220px;
+    height: 200px;
+    color: #fff;
+    overflow: hidden;
+}
+.u-merry .container .content{
+    width: 220px;
+    text-align: center;
+}
+.u-merry .container .content li{
+    height: 40px;
+    line-height: 40px;
+}

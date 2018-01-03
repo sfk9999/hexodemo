@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css_threeColumn_wing</title>
+    <link rel="stylesheet" href="css/base/base.css">
+    <!--highligh-->
+    <link rel="stylesheet" href="css/base/highlight/rainbow.css">
+    <script src="js/highlight/highlight.pack.js"></script>
+    <link rel="stylesheet" href="css/css_threeColumn_wing.css">
+</head>
+<body>
+<div class="container">
+    <div class="main">
+        <div class="mainInner">main</div>
+    </div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+</div>
+<pre class="m-code">
+<code class="remark">
+淘宝双飞翼布局
+
+思路：
+1. 三者都设置向左浮动
+2. 设置main宽度为100%
+3. 设置负边距：left设置负边距为负的100%，right设置负边距为负的自身宽度
+4. 设置main-Inner的margin值给左右两个子面板留出空间。
+</code>
+<code class="html">
+&lt;div class="container">
+    &lt;div class="main">
+        &lt;div class="mainInner">main&lt;/div>
+    &lt;/div>
+    &lt;div class="left">left&lt;/div>
+    &lt;div class="right">right&lt;/div>
+&lt;/div>
+</code>
+<code class="css">
+.main,.left,.right{
+    float:left;
+    min-height: 100px;
+}
+.main{
+    width: 100%;
+    background: #fe8019;
+}
+.left{
+    margin-left: -100%;
+    width: 200px;
+    background: #fef20d;
+}
+.right{
+    margin-left: -220px;
+    width: 220px;
+    background: #ffcc66;
+}
+.mainInner{
+    margin-left: 200px;
+    margin-right: 220px;
+}
+
+</code>
+</pre>
+<script>
+//highlight
+hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+</html>

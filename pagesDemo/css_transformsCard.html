@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css_transformsCard</title>
+    <link rel="stylesheet" href="css/base/base.css">
+    <link rel="stylesheet" href="css/css_transformsCard.css">
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            var card=$('#card');
+            var btn=$('#btn');
+            btn.on('click',function(){
+                card.toggleClass('f-filpped');
+            });
+        });
+    </script>
+</head>
+<body>
+<section class="container">
+    <div id="card">
+        <figure class="front">1</figure>
+        <figure class="back">2</figure>
+    </div>
+</section>
+<button id="btn">翻转卡片</button>
+</body>
+</html>

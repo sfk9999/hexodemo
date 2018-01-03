@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_drag</title>
+    <link rel="stylesheet" href="css/js_drag.css">
+    <script type="text/javascript">
+        window.onload=function() {
+            var oBox = document.getElementById("box");
+            var aSpan = oBox.getElementsByTagName("span");
+            var disX=0;
+            var disY=0;
+            var bDrag = false;
+
+            var status=function(){
+                aSpan[0].innerHTML=bDrag;
+                aSpan[1].innerHTML=oBox.offsetTop;
+                aSpan[2].innerHTML=oBox.offsetLeft;
+            }
+
+            oBox.onmousedown=function(event){
+                var oEvent1=event||window.event;
+                bDrag=true;
+                disX=oEvent1.clientX-oBox.offsetLeft;//得到鼠标到盒子边框的距离
+                disY=oEvent1.clientY-oBox.offsetTop;
+                //开始拖拽
+                document.onmousemove=function(event){
+                    var oEvent2=event||window.event;
+                    var l=oEvent2.clientX-disX; //获取鼠标拖动的位置
+                    var t=oEvent2.clientY-disY;
+                    //靠近边框就被边框吸住
+                    if (l<0) {
+                        l = 0;
+                    }else if(l > document.documentElement.clientWidth - oBox.offsetWidth){
+                        l = document.documentElement.clientWidth - oBox.offsetWidth;//oBox.offsetWidth=box的宽度;document.documentElement.clientWidth==浏览器窗口的宽度
+                    }
+                    if(t<0){
+                        t=0;
+                    }else if(t > document.documentElement.clientHeight - oBox.offsetHeight){
+                        t = document.documentElement.clientHeight - oBox.offsetHeight;
+                    }
+                    oBox.style.left=l+"px";
+                    oBox.style.top=t+"px";
+                    status();
+                };
+                document.onmouseup=function(){
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+                    bDrag=false;
+                    status();
+                };
+                return false;
+            };
+            status();
+
+        };
+    </script>
+</head>
+<body>
+<div id="box">
+    <p><strong>Drag:</strong><span></span></p>
+    <p><strong>offsetTop:</strong><span></span></p>
+    <p><strong>offsetLeft:</strong><span></span></p>
+</div>
+
+</body>
+</html>

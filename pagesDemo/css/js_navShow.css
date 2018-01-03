@@ -1,0 +1,33 @@
+body,div,ul,li,p{margin:0;padding:0;}
+body{    font:12px/1.5 Arial;}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration:none;
+}
+#nav{
+    position: relative;
+    margin: 10px auto;
+    display: table;
+}
+
+#nav ul li{float:left;}
+#nav ul li>a{
+    display:inline-block;
+    height: 30px;
+    width: 120px;
+    font-size:14px;
+    color: white;
+    text-align:center;
+    line-height: 30px;
+    background-color:blue ;
+}
+#nav ul li a:hover{
+    font-weight: 300;
+    border-radius:10px;
+}
+#nav .subnav{
+    position:absolute;
+    display: none;
+}

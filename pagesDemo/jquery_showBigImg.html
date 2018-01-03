@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery_showBigImg</title>
+    <style>
+        li{
+            list-style:none;
+            display: inline-block;
+        }
+        img{
+            border: 1px solid black;
+        }
+
+        #tooltip{
+            position:absolute;
+            border:1px solid #ccc;
+            background:#333;
+            padding:2px;
+            display:none;
+            color:#fff;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+<ul>
+    <li><a href="imgs/jquery_showBigImg/apple_1_bigger.jpg" class="tooltip" title="苹果 iPod"><img src="imgs/jquery_showBigImg/apple_1.jpg" alt="苹果 iPod" /></a></li>
+    <li><a href="imgs/jquery_showBigImg/apple_2_bigger.jpg" class="tooltip" title="苹果 iPod nano"><img src="imgs/jquery_showBigImg/apple_2.jpg" alt="苹果 iPod nano"/></a></li>
+    <li><a href="imgs/jquery_showBigImg/apple_3_bigger.jpg" class="tooltip" title="苹果 iPhone"><img src="imgs/jquery_showBigImg/apple_3.jpg" alt="苹果 iPhone"/></a></li>
+    <li><a href="imgs/jquery_showBigImg/apple_4_bigger.jpg" class="tooltip" title="苹果 Mac"><img src="imgs/jquery_showBigImg/apple_4.jpg" alt="苹果 Mac"/></a></li>
+</ul>
+
+<script>
+    $(function () {
+        var x=10;
+        var y=20;
+        $(".tooltip").mouseover(function (e) {
+            this.myTitle=this.title;
+            this.title="";
+            var $tooltip =("<div id='tooltip'><img src='"+this.href+"' alt='产品预览'>"+this.myTitle+"</div>");
+            $("body").append($tooltip);
+            $("#tooltip").css({
+                "top": (e.pageY+y)+"px",
+                "left":(e.pageX+x)+"px"
+            }).show();
+        }) .mouseout(function () {
+            this.title=this.myTitle;
+            $("#tooltip").remove();
+        }).mousemove(function (e) {
+            $("#tooltip").css({
+                "top": (e.pageY+y)+"px",
+                "left":(e.pageX+x)+"px"
+            });
+        });
+    })
+
+</script>
+</body>
+</html>

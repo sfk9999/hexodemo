@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="pagesDemo/css/index.css">
+    <link rel="stylesheet" href="pagesDemo/css/base/base.css">
+    <script src="pagesDemo/js/vue.js"></script>
+
+</head>
+<body>
+<div class="m-head">
+    <span>
+        <strong>sun丶的小仓库</strong>
+        <br>
+        <strong>每天进步一点点</strong>
+    </span>
+</div>
+<div class="g-flow" id="g-side">
+    <div class="m-asdie">
+        <ul>
+            <li v-for="(item,index) in titles" @click="showToggle(index)" :class={active:item.isSubShow}>
+                {{item.name}}
+            </li>
+        </ul>
+    </div>
+    <div class="m-body">
+        <ul v-for="item in titles">
+            <li v-show="item.isSubShow" v-for="detail in item.details" @click="gotoHref(detail.name)">
+                <strong>{{detail.name}}</strong>
+                <br>
+                {{detail.des}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    var obj=[
+        {
+            "name":"布局",
+            isSubShow:true,
+            "details":[
+                {name:"css_center",des:"absolute+transform水平垂直居中"},
+                {name:"css_center_flex",des:"flex水平垂直居中"},
+                { name:"css_center_table",des:"table水平垂直居中"},
+                { name:"css_center_text",des:"文字水平垂直居中"},
+                { name:"css_overflow",des:"overflow左列固定，右列自适应"},
+                { name:"css_sameHeight_flex",des:"等高的flex方法"},
+                { name:"css_sameHeight_float",des:"等高的float方法(伪等高)"},
+                { name:"css_sameHeight_table",des:"等高的table方法"},
+                { name:"css_sameWidth_flex",des:"等宽（等分布局）的flex方法"},
+                { name:"css_sameWidth_float",des:"等宽（等分布局）的float方法"},
+                { name:"ss_sameWidth_table",des:"等宽（等分布局）的table方法"},
+                { name:"css_threeColumn_flex",des:"两边固定中间自适应的三列布局"},
+                { name:"css_threeColumn_grail",des:"圣杯布局"},
+                { name:"css_threeColumn_wing",des:"淘宝双飞翼布局"}
+            ]
+        },
+        {
+            "name":"css",
+            isSubShow:false,
+            "details":[
+                { name:"css_triangle",des:"CSS三角形和平行四边形"},
+                { name:"css_easyLayout",des:"CSS简单布局"},
+                { name:"css_transformsCard",des:"CSS旋转卡片效果"}
+            ]
+        },
+        {
+            name:'JavaScript',
+            isSubShow:false,
+            details:[
+                {name:'js_rollingNav',des:'页面滚动导航'},
+                {name:'js_pictureCar',des:'简单的图片切换'},
+                {name:'js_pictureSlide',des:'图片幻灯片+自动播放'},
+                {name:'js_navShow',des:'导航效果'},
+                {name:'js_formLinkage',des:'表单联动'},
+                {name:'js_formCheck',des:'表单的动态校验'},
+                {name:'js_drag',des:'拖动的实现'},
+                {name:'js_dragfile',des:'拖拽上传文件'}
+
+            ]
+        },
+        {
+            name:'jQuery',
+            isSubShow:false,
+            details:[
+                {name:'jquery_showBigImg',des:'显示大图'},
+                {name:'jquery_fullPage',des:'fullpage全屏滚动'},
+                {name:'jquery_lazyload',des:'图片懒加载'}
+            ]
+        },
+        {
+            name:'移动web',
+            isSubShow:false,
+            details:[
+                {name:'m_iscroll_nav',des:'iscroll完成导航'}
+            ]
+        }
+
+
+    ];
+    new Vue({
+        el:'#g-side',
+        data:{
+            titles:obj
+        },
+        methods:{
+            showToggle:function(index){
+                for(var i =0 ; i<this.titles.length;i++){
+                    this.titles[i].isSubShow=false;
+                    if(i==index){
+                        this.titles[index].isSubShow=true;
+                    }
+                }
+            },
+            gotoHref:function (name) {
+//                window.location.href='pagesDemo/'+name+'.html';
+                window.open('pagesDemo/'+name+'.html');
+            }
+        }
+    })
+</script>
+</body>
+</html>

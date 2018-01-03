@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_navShow</title>
+    <link rel="stylesheet" href="css/js_navShow.css">
+</head>
+<body>
+<div id="nav">
+    <ul>
+        <li><a href="javascript:;">网站导航</a></li>
+        <li>
+            <a href="javascript:;">行业资讯</a>
+            <div class="subnav">
+                <em class="arrow"></em>
+                <p>
+                    <span>
+                        <a href="javascript:;">业界动态</a>|
+                        <a href="javascript:;">收购融资</a>|
+                        <a href="javascript:;">门户动态</a>|
+                        <a href="javascript:;">搜索引擎</a>|
+                        <a href="javascript:;">网络游戏</a>|
+                        <a href="javascript:;">电子商务</a>|
+                        <a href="javascript:;">广告传媒</a>|
+                        <a href="javascript:;">厂商开发</a>
+                    </span>
+                </p>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;">在线信息</a>
+            <div class="subnav">
+                <em class="arrow"></em>
+                <p>
+                    <span>
+                        <a href="javascript:;">在线报道</a>|
+                        <a href="javascript:;">新闻推荐</a>|
+                        <a href="javascript:;">线下聚会</a>|
+                        <a href="javascript:;">线上访谈</a>|
+                        <a href="javascript:;">线上茶馆</a>|
+                        <a href="javascript:;">网站排行</a>
+                    </span>
+                </p>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;">网站运营</a>
+            <div class="subnav">
+                <em class="arrow"></em>
+                <p>
+                    <span>
+                        <a href="javascript:;">建站经验</a>|
+                        <a href="javascript:;">策划盈利</a>|
+                        <a href="javascript:;">搜索优化</a>|
+                        <a href="javascript:;">网站推广</a>|
+                        <a href="javascript:;">免费资源</a>
+                    </span>
+                </p>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;">设计在线</a>
+            <div class="subnav">
+                <em class="arrow"></em>
+                <p>
+                    <span>
+                        <a href="javascript:;">网站推荐</a>|
+                        <a href="javascript:;">网页设计</a>|
+                        <a href="javascript:;">WEB标准</a>|
+                        <a href="javascript:;">视频处理</a>|
+                        <a href="javascript:;">设计活动</a>
+                    </span>
+                </p>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;">网络编程</a>
+            <div class="subnav">
+                <em class="arrow"></em>
+                <p>
+                    <span>
+                        <a href="javascript:;">Asp编程</a>|
+                        <a href="javascript:;">Php编程</a>|
+                        <a href="javascript:;">.Net编程</a>|
+                        <a href="javascript:;">Xml编程</a>|
+                        <a href="javascript:;">Access</a>|
+                        <a href="javascript:;">Mssql</a>|
+                        <a href="javascript:;">Mysql</a>
+                    </span>
+                </p>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;">联盟信息</a>
+            <div class="subnav">
+                <em class="arrow"></em>
+                <p>
+                    <span>
+                        <a href="javascript:;">联盟动态</a>|
+                        <a href="javascript:;">联盟介绍</a>|
+                        <a href="javascript:;">联盟点评</a>|
+                        <a href="javascript:;">网赚技巧</a>
+                    </span>
+                </p>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;">服务器</a>
+            <div class="subnav">
+                <em class="arrow"></em>
+                <p>
+                    <span>
+                        <a href="javascript:;">Web服务器</a>|
+                        <a href="javascript:;">Ftp服务器</a>|
+                        <a href="javascript:;">Mail服务器</a>|
+                        <a href="javascript:;">Dns服务器</a>|
+                        <a href="javascript:;">Win服务器</a>|
+                        <a href="javascript:;">Linux服务器</a>|
+                        <a href="javascript:;">安全防护</a>|
+                        <a href="javascript:;">虚拟主机</a>
+                    </span>
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>
+<script>
+    function $(id){
+        return document.getElementById('id');
+    }
+
+    window.onload=function(){
+        var aNav =$("nav");
+        var aLi=document.getElementsByTagName('li');
+
+        var aArrow = document.getElementsByClassName("subnav");
+
+        var lenLi = aLi.length;
+        var lenArrow = aArrow.length;
+        for(var i=0;i<lenLi;i++){
+            aLi[i].index=i;
+            aLi[i].onmouseover=function () {
+                //隐藏所有子菜单
+                for(let j=0;j<lenArrow;j++){
+                    aArrow[j].style.display='none';
+                }
+                console.log(this.index);
+                //显示要显示的菜单
+                aArrow[(this.index)-1].style.display = "block";
+
+                if(this.index>3){
+                    aArrow[(this.index)-1].style.right=0;
+                }
+            }
+
+        }
+    }
+</script>
+</body>
+</html>

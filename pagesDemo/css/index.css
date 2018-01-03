@@ -1,0 +1,74 @@
+html{
+    font-size: 12px;
+}
+.m-head{
+    height: 160px;
+    text-align: center;
+    /*background: #eeeeee;*/
+    background: linear-gradient(top,#fe8019,#ffcc66);
+    background: -moz-linear-gradient(top,#fe8019,#ffcc66);
+    background: -webkit-linear-gradient(top,#fe8019,#ffcc66);
+    background: -ms-linear-gradient(top,#fe8019,#ffcc66);
+    background: -o-linear-gradient(top,#fe8019,#ffcc66);
+    /*垂直水平居中*/
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.g-flow{
+    margin: 20px auto;
+    width: 960px;
+    /*width: 80rem;*/
+}
+.m-asdie{
+    float:left;
+    margin-right:20px;
+    width:200px;
+    background:#fff;
+    -webkit-box-shadow:0px 1px 2px #bbb;
+    box-shadow:0px 1px 2px #bbb;
+    cursor:pointer;
+}
+.m-asdie li{
+    text-align:center;
+    height: 40px;
+    line-height: 40px;
+    border-bottom:1px solid #ddd;
+}
+.m-asdie li:hover{
+    background:#f8f8f8;
+}
+/*权重关系*/
+.m-asdie li.active{
+    background: #fe8019;
+}
+
+.m-body{
+    box-shadow:0px 1px 2px #bbb;
+    overflow:hidden;
+
+}
+.m-body li{
+    display: inline-block;
+    width: 210px;
+    margin: 10px 15px;
+    border:1px solid #eee;
+    cursor:pointer;
+
+}
+.m-body li:hover{
+    background:#f8f8f8;
+
+    transition: transform 0.5s;
+    -ms-transition: -ms-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+
+    transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -webkit-transform:rotate(5deg);
+}

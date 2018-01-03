@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css_center_text</title>
+    <link rel="stylesheet" href="css/base/base.css">
+    <!--highligh-->
+    <link rel="stylesheet" href="css/base/highlight/rainbow.css">
+    <script src="js/highlight/highlight.pack.js"></script>
+    <link rel="stylesheet" href="css/css_center_text.css">
+</head>
+<body>
+
+<div class="parent">
+    <span class="single">一行文字</span>
+</div>
+<div class="parent parent_multiVertical">
+    <span class="multiVertical">多行文字<br>的垂直水平居中<br>absolute+transform</span>
+</div>
+<div class="parent parent_multiVertical_flex">
+    <span>多行文字<br>的垂直水平居中flex方法</span>
+</div>
+
+
+<pre class="m-code">
+<code class="remark">
+在父元素浮动的情况下进行单行和多行文字的居中
+
+因为有float，所以不能使用display:table-cell;的方法。
+</code>
+<code class="html">
+&lt;div class="parent">
+    &lt;span class="single">一行文字&lt;/span>
+&lt;/div>
+&lt;div class="parent parent_multiVertical">
+    &lt;span class="multiVertical">多行文字
+    &lt;br>的垂直水平居中
+    &lt;br>absolute+transform&lt;/span>
+&lt;/div>
+&lt;div class="parent parent_multiVertical_flex">
+    &lt;span>多行文字&lt;br>的垂直水平居中flex方法&lt;/span>
+&lt;/div>
+</code>
+<code class="css">
+.parent{
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+    border:1px solid red;
+    text-align: center;
+}
+.single{
+    line-height: 200px;
+}
+.parent_multiVertical{
+    position: relative;
+}
+.multiVertical{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.parent_multiVertical_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</code>
+</pre>
+<script>
+//highlight
+hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

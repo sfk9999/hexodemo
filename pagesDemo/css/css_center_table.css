@@ -1,0 +1,10 @@
+.parent{
+    width:600px;height:300px;background:#eee;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.children{
+    width:50px;height:50px;background:#e60415;
+    display: inline-block;
+}

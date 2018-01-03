@@ -1,0 +1,12 @@
+.parent{
+    display: flex;
+}
+.left{
+    margin-right: 20px;
+    width: 100px;
+    background: #2f35ff;
+}
+.right{
+    flex:1;
+    background: #fef20d;
+}

@@ -1,0 +1,12 @@
+.parent{
+    display: flex;
+}
+.column{
+    flex: 1;
+}
+.column+.column{
+    margin-left: 20px;
+}
+p{
+    background:#fe8019;
+}

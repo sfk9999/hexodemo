@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_pictureCar</title>
+    <link rel="stylesheet" href="css/js_pictureCar.css">
+    <link rel="stylesheet" href="css/base/base.css">
+</head>
+<body>
+<div id="content">
+    <a href="#" id="prev"><</a>
+    <a href="#" id="next">></a>
+    <p id="text">正在加载图片</p>
+    <span id="span1">正在加载数字</span>
+    <img id="img1">
+</div>
+
+
+<script>
+    var attrImg = ['imgs/js_pictureCar/1.jpg','imgs/js_pictureCar/2.jpg','imgs/js_pictureCar/3.jpg','imgs/js_pictureCar/4.jpg'];
+    var arrText=['一','二','三','四'];
+    var oCon = document.getElementById('content');
+    var oPrev = document.getElementById('prev');
+    var oNext = document.getElementById('next');
+    var oText = document.getElementById('text');
+    var oSpan = document.getElementById('span1');
+    var oImg = document.getElementById('img1');
+
+    var num=0;
+    function imgChange() {
+        oSpan.innerHTML = num+1 +'/' + arrText.length;
+        oImg.src = attrImg[num];
+        oText.innerHTML =arrText[num];
+    }
+
+    imgChange();
+
+    oNext.onclick = function(){
+        num++;
+        if(num==4)
+        {
+            num=0;
+        }
+        imgChange();
+    }
+    oPrev.onclick = function(){
+        num--;
+        if(num==-1)
+        {
+            num=arrText.length-1;
+        }
+        imgChange();
+    }
+
+</script>
+</body>
+</html>

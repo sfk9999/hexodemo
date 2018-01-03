@@ -1,0 +1,31 @@
+body{
+    min-width: 700px;
+}
+.container{
+    padding-left: 200px;
+    padding-right: 220px;
+}
+.main,.left,.right{
+    float:left;
+    min-height: 100px;
+}
+.left,.right{
+    position: relative;
+}
+.main{
+    width: 100%;
+    background: #fe8019;
+}
+.left{
+    margin-left: -100%;
+    left: -200px;
+    width: 200px;
+    background: #fef20d;
+}
+.right{
+    margin-left: -220px;
+    right: -220px;
+    width: 220px;
+    background: #ffcc66;
+}
+

@@ -1,0 +1,46 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family:微软雅黑;
+    font-size:14px;
+}
+
+.oTable{
+    margin: 50px auto;
+    display: table;
+}
+
+
+.oLabel{
+    text-align: right;
+    font-weight: 600;
+    padding: 10px;
+}
+
+input{
+    width: 500px;
+    height: 30px;
+    border-radius: 5px;
+    border:1px solid #9c9c9c;
+    text-indent: 0.5em; /*对输入的文本进行缩进*/
+}
+
+#sub-button{
+    float: right;
+    color: white;
+    background-color: #1a5ec9;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 50px;
+}
+
+
+#sub-button:hover{
+    background-color:#2f35ff;
+}
+
+.tip{
+    color: #9c9c9c;
+    line-height:30px;
+}

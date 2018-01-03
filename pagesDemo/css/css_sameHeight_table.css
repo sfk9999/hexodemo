@@ -1,0 +1,14 @@
+.parent{
+    display: table;
+    table-layout: fixed;
+}
+.left,.right{
+    display: table-cell;
+}
+.left{
+    background: #2f35ff;
+    padding: 30px;
+}
+.right{
+    background: #fef20d;
+}

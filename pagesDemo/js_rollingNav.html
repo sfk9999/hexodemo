@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_rollingNav</title>
+    <link rel="stylesheet" href="css/js_rollingNav.css">
+    <link rel="stylesheet" href="css/base/base.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper" id="oDiv">
+            <div class="section" id="section1"><h1>1</h1></div>
+            <div class="section" id="section2"><h1>2</h1></div>
+            <div class="section" id="section3"><h1>3</h1></div>
+            <div class="section" id="section4"><h1>4</h1></div>
+            <div class="section" id="section5"><h1>5</h1></div>
+        </div>
+        <nav>
+            <a href="#section1">条目一</a>
+            <a href="#section2">条目二</a>
+            <a href="#section3">条目三</a>
+            <a href="#section4">条目四</a>
+            <a href="#section5">条目五</a>
+        </nav>
+    </div>
+    <script>
+        var oDiv = document.getElementById('oDiv');
+        var oList=oDiv.getElementsByTagName('div');
+        var oA = document.getElementsByTagName('a');
+        window.onscroll=function(){
+          var currentPosition=document.body.scrollTop||document.documentElement.scrollTop;
+          for(var i=0;i<oList.length;i++){
+              if(oList[i].offsetTop<currentPosition+100 &&(i==oList.length-1 || oList[i+1].offsetTop>currentPosition+100)){
+                  oA[i].style.color='red';
+              }
+              else {
+                  oA[i].style.color='blue';
+              }
+          }
+        };
+    </script>
+</body>
+</html>

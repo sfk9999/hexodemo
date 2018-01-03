@@ -1,0 +1,15 @@
+.parent-fix{
+    margin-left: -20px;
+}
+.parent{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.column{
+    display: table-cell;
+    padding-left: 20px;
+}
+p{
+    background:#fe8019;
+}

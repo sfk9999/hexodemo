@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inline-block+text-align+table-cell+vertical-align水平垂直居中</title>
+    <link rel="stylesheet" href="css/css_center_table.css">
+    <link rel="stylesheet" href="css/base/base.css">
+    <!--highligh-->
+    <link rel="stylesheet" href="css/base/highlight/rainbow.css">
+    <script src="js/highlight/highlight.pack.js"></script>
+</head>
+<body>
+<div class="parent">
+    <div class="children">Demo</div>
+</div>
+<pre class="m-code">
+<code>
+inline-block+text-align+table-cell+vertical-align水平垂直居中
+
+兼容性好
+</code>
+<code class="html">
+&lt;div class="parent">
+    &lt;div class="children">Demo&lt;/div>
+&lt;/div>
+</code>
+<code class="css">
+.parent{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width:600px;
+    height:300px;
+    background:#eee;
+}
+.children{
+    display: inline-block;
+    width:50px;
+    height:50px;
+    background:#e60415;
+}
+</code>
+</pre>
+<script>
+    //highlight
+    hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

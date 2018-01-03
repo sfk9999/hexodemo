@@ -1,0 +1,12 @@
+.parent{
+    margin-left: -20px;
+}
+.column{
+    float:left;
+    width: 25%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    }
+p{
+    background:#fe8019;
+}

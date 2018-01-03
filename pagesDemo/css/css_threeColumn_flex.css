@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    min-height: 100px;
+}
+.left{
+    width: 200px;
+    background: #fef20d;
+}
+.right{
+    width: 220px;
+    background: #ffcc66;
+}
+.main{
+    flex: 1;
+    background: #fe8019;
+}

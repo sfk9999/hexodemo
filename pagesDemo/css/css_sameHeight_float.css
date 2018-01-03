@@ -1,0 +1,17 @@
+.parent{
+    overflow: hidden;
+}
+.left,.right{
+    padding-bottom: 99999px;
+    margin-bottom: -99999px;
+}
+.left{
+    float: left;
+    width: 100px;
+    background: #2f35ff;
+    margin-right: 20px;
+}
+.right{
+    overflow: hidden;
+    background: #fef20d;
+}

@@ -1,0 +1,45 @@
+body,div,ul,li{margin:0;padding:0;}
+body{background:#000;text-align:center;font:12px/20px Arial;}
+img{width: 400px;height: 200px;}
+ul{list-style: none;}
+ul li{
+    float: left;
+}
+#box{
+    position:relative;
+    margin: 10px auto;
+    width: 405px;
+    height: 205px;
+}
+#box .list{
+    overflow: hidden;
+    width: 400px;
+    height: 200px;
+}
+#box .list li{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+#box .list li.current{opacity:1;filter:alpha(opacity=100);}
+#box .list li.hidecurrent{opacity:0;filter:alpha(opacity=0);}
+#box .count{
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+}
+#box .count li{
+    margin-right: 5px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius:20px;
+    overflow: hidden;
+    background: #f90;
+    cursor:pointer;
+}
+#box .count li.current{
+    color:#fff;
+    background:#f60;
+}

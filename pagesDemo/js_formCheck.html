@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_formCheck</title>
+    <link rel="stylesheet" href="css/js_formCheck.css">
+</head>
+<body>
+<form id="aForm" method="post"></form>
+<table class="oTable">
+    <tbody>
+    <tr>
+        <td class="oLabel"><label for="nameInput">名称</label></td>
+        <td><input type="text" id="nameInput"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td id="name-tip" class="tip"></td>
+    </tr>
+
+    <tr>
+        <td class="oLabel"><label for="pwInput">密码</label></td>
+        <td><input type="password" id="pwInput"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td id="pw-tip" class="tip"></td>
+    </tr>
+    <tr>
+        <td class="oLabel"><label for="pwcInput">密码确认</label></td>
+        <td><input type="password" id="pwcInput"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td id="pwc-tip" class="tip"></td>
+    </tr>
+    <tr>
+        <td class="oLabel"><label for="emailInput">邮箱</label></td>
+        <td><input type="email" id="emailInput"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td id="email-tip" class="tip"></td>
+    </tr>
+    <tr>
+        <td class="oLabel"><label for="telInput">手机</label></td>
+        <td><input type="tel" id="telInput"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td id="tel-tip" class="tip"></td>
+    </tr>
+
+    </tbody>
+    <tfoot>
+    <tr>
+        <td></td>
+        <td class="oButton">
+            <input type="submit" id="sub-button" value="验证">
+        </td>
+
+    </tr>
+    </tfoot>
+
+
+</table>
+</form>
+
+<script src="js/js_formCheck.js"></script>
+</body>
+</html>
