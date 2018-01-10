@@ -29,7 +29,7 @@
             <li v-show="item.isSubShow" v-for="detail in item.details" @click="gotoHref(detail.name)">
                 <strong>{{detail.name}}</strong>
                 <br>
-                {{detail.des}}
+                <p :title="detail.des" class="m-body-p">{{detail.des}}</p>
             </li>
         </ul>
     </div>
@@ -62,7 +62,7 @@
             isSubShow:false,
             "details":[
                 { name:"css_triangle",des:"CSS三角形和平行四边形"},
-                { name:"css_easyLayout",des:"CSS简单布局"},
+                { name:"css_easyLayout",des:"CSS布局实例"},
                 { name:"css_transformsCard",des:"CSS旋转卡片效果"}
             ]
         },
@@ -77,7 +77,8 @@
                 {name:'js_formLinkage',des:'表单联动'},
                 {name:'js_formCheck',des:'表单的动态校验'},
                 {name:'js_drag',des:'拖动的实现'},
-                {name:'js_dragfile',des:'拖拽上传文件'}
+                {name:'js_dragfile',des:'拖拽上传文件'},
+                {name:'js_animation',des:'js动画:raf和setTimeout'}
 
             ]
         },
@@ -88,6 +89,14 @@
                 {name:'jquery_showBigImg',des:'显示大图'},
                 {name:'jquery_fullPage',des:'fullpage全屏滚动'},
                 {name:'jquery_lazyload',des:'图片懒加载'}
+            ]
+        },
+        {
+            name:'Gulp',
+            isSubShow:false,
+            details:[
+                {name:'gulp_watch',des:'通过监听less文件来改变css'},
+                {name:'gulp_newPage',des:'自动化创建工具'}
             ]
         },
         {

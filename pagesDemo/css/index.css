@@ -72,3 +72,9 @@ html{
     -o-transform: rotate(5deg);
     -webkit-transform:rotate(5deg);
 }
+
+.m-body .m-body-p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
